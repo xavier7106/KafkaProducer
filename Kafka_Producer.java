@@ -17,7 +17,7 @@ public class Kafka_Producer {
 	 private int Buffer_memory;
 	 
 	 
-	 private Producer<String, String> producer;
+	 private static Producer<String, String> producer;
 	 
 	 private Kafka_Producer(Builder builder)
 		{
@@ -109,7 +109,7 @@ public class Kafka_Producer {
 	 }
 	 
 	 public static void main(String[] args) throws Exception {
-		 Producer test = newKafkaProducer(Kafka_Producer.newKafkaProducerConfig()
+		 producer = newKafkaProducer(Kafka_Producer.newKafkaProducerConfig()
 				 .Host("127.0.0.1")
 				 .Port(9092)
 				 .Buffer_memory(33554432)
