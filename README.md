@@ -1,5 +1,6 @@
 # KafkaProducer
 
+ xavier adriaenssens
  
 		 producer = newKafkaProducer(Kafka_Producer.newKafkaProducerConfig()
      
